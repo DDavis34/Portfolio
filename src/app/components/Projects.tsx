@@ -10,7 +10,7 @@ export function Projects() {
     {
       title: 'AI Texas Holdem Bot',
       description: 'Uses hand evaluation, opponent modeling, and ensemble strategies for adaptive real-time tournament play.',
-      image: '/poker-logo.png',
+      image: '/dist/assets/poker-logo.png',
       tags: ['Python', 'Websockets', 'Docker', 'Go'],
       gradient: 'from-purple-500 to-pink-500',
       githuburl: 'https://github.com/vekovius/AI-Texas-Holdem-CSC4444.git'
@@ -18,7 +18,7 @@ export function Projects() {
     {
       title: 'Tiger Compiler',
       description: 'Built a custom compiler in Java that turns source code into C, handling everything from Lexical analysis to code generation',
-      image: '/compiler-logo.png',
+      image: '/dist/assets/compiler-logo.png',
       tags: ['Java', 'Lex', 'Code Generation', 'C'],
       gradient: 'from-pink-500 to-orange-500',
       githuburl: 'https://github.com/MichaelRdot/Roll-Call.git'
@@ -26,7 +26,7 @@ export function Projects() {
     {
       title: 'Roll Call: PathFinder Adventures',
       description: 'Automates Pathfinder 2e campaigns with real-time character tracking, rule calculations, and API integration.',
-      image: '/rollcall-logo.png',
+      image: '/dist/assets/rollcall-logo.png',
       tags: ['In Progress'],
       gradient: 'from-orange-500 to-yellow-500',
       githuburl: 'https://github.com/MichaelRdot/Roll-Call.git'
