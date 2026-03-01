@@ -8,30 +8,33 @@ export function Projects() {
 
   const projects = [
     {
-      title: 'E-Commerce Platform',
-      description: 'A full-featured online shopping experience with payment integration, real-time inventory, and advanced search capabilities.',
-      image: 'https://images.unsplash.com/photo-1759322945173-76b604965b2f?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxtb2Rlcm4lMjBjb2RpbmclMjBzZXR1cHxlbnwxfHx8fDE3NzE5MjczODJ8MA&ixlib=rb-4.1.0&q=80&w=1080&utm_source=figma&utm_medium=referral',
-      tags: ['React', 'Node.js', 'MongoDB', 'Stripe'],
-      gradient: 'from-purple-500 to-pink-500'
+      title: 'AI Texas Holdem Bot',
+      description: 'Uses hand evaluation, opponent modeling, and ensemble strategies for adaptive real-time tournament play.',
+      image: '/poker-logo.png',
+      tags: ['Python', 'Websockets', 'Docker', 'Go'],
+      gradient: 'from-purple-500 to-pink-500',
+      githuburl: 'https://github.com/vekovius/AI-Texas-Holdem-CSC4444.git'
     },
     {
-      title: 'Task Management App',
-      description: 'Collaborative project management tool with real-time updates, team chat, and advanced analytics dashboard.',
-      image: 'https://images.unsplash.com/photo-1771189255245-225dcea3f652?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxjcmVhdGl2ZSUyMGRlc2lnbiUyMHByb2plY3R8ZW58MXx8fHwxNzcxOTIxNzkwfDA&ixlib=rb-4.1.0&q=80&w=1080&utm_source=figma&utm_medium=referral',
-      tags: ['TypeScript', 'React', 'Firebase', 'Tailwind'],
-      gradient: 'from-pink-500 to-orange-500'
+      title: 'Tiger Compiler',
+      description: 'Built a custom compiler in Java that turns source code into C, handling everything from Lexical analysis to code generation',
+      image: '/compiler-logo.png',
+      tags: ['Java', 'Lex', 'Code Generation', 'C'],
+      gradient: 'from-pink-500 to-orange-500',
+      githuburl: 'https://github.com/MichaelRdot/Roll-Call.git'
     },
     {
-      title: 'AI Content Generator',
-      description: 'Intelligent content creation platform powered by machine learning for automated marketing copy and social media posts.',
-      image: 'https://images.unsplash.com/photo-1719400471588-575b23e27bd7?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxwcm9mZXNzaW9uYWwlMjBkZXZlbG9wZXIlMjB3b3Jrc3BhY2V8ZW58MXx8fHwxNzcxOTU5NTIxfDA&ixlib=rb-4.1.0&q=80&w=1080&utm_source=figma&utm_medium=referral',
-      tags: ['Next.js', 'OpenAI', 'PostgreSQL', 'Vercel'],
-      gradient: 'from-orange-500 to-yellow-500'
+      title: 'Roll Call: PathFinder Adventures',
+      description: 'Automates Pathfinder 2e campaigns with real-time character tracking, rule calculations, and API integration.',
+      image: '/rollcall-logo.png',
+      tags: ['In Progress'],
+      gradient: 'from-orange-500 to-yellow-500',
+      githuburl: 'https://github.com/MichaelRdot/Roll-Call.git'
     }
   ];
 
   return (
-    <section id="projects" className="py-32 px-6 bg-[#1a1a1a]">
+    <section id="projects" className="py-32 px-6 bg-[#151515]">
       <div className="max-w-7xl mx-auto" ref={ref}>
         <motion.div
           initial={{ opacity: 0, y: 50 }}
@@ -74,21 +77,23 @@ export function Projects() {
                     {project.tags.map((tag) => (
                       <span
                         key={tag}
-                        className="px-3 py-1 text-sm bg-gray-800 rounded-full text-gray-300"
+                        className="px-3 py-1 text-sm rounded-full bg-blue-900/40 text-blue-300 border border-blue-700/50"
                       >
                         {tag}
                       </span>
                     ))}
                   </div>
 
-                  <div className="flex gap-4">
+                  <div className="flex justify-center w-full">
                     <button className={`flex items-center gap-2 px-4 py-2 rounded-lg bg-gradient-to-r ${project.gradient} text-white hover:shadow-lg transition-all duration-300`}>
-                      <ExternalLink size={18} />
-                      <span>Live Demo</span>
-                    </button>
-                    <button className="flex items-center gap-2 px-4 py-2 rounded-lg bg-gray-800 text-white hover:bg-gray-700 transition-all duration-300">
+                      <a href = {project.githuburl}
+                          target="_blank"
+                          rel="noopener noreferrer"
+                          className="flex items-center gap-2"
+                      >
                       <Github size={18} />
                       <span>Code</span>
+                    </a>
                     </button>
                   </div>
                 </div>

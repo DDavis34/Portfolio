@@ -9,20 +9,20 @@ export function Skills() {
       title: 'Frontend',
       gradient: 'from-purple-500 to-pink-500',
       skills: [
-        { name: 'React', level: 95 },
+        { name: 'HTML', level: 95 },
         { name: 'TypeScript', level: 90 },
         { name: 'Next.js', level: 88 },
-        { name: 'Tailwind CSS', level: 92 },
+        { name: 'CSS', level: 92 },
       ]
     },
     {
       title: 'Backend',
       gradient: 'from-pink-500 to-orange-500',
       skills: [
-        { name: 'Node.js', level: 85 },
-        { name: 'Python', level: 80 },
-        { name: 'PostgreSQL', level: 83 },
-        { name: 'MongoDB', level: 87 },
+        { name: 'Python', level: 85 },
+        { name: 'SQL', level: 80 },
+        { name: 'C', level: 83 },
+        { name: 'Java', level: 87 },
       ]
     },
     {
@@ -30,9 +30,9 @@ export function Skills() {
       gradient: 'from-orange-500 to-yellow-500',
       skills: [
         { name: 'Git', level: 93 },
-        { name: 'Docker', level: 78 },
-        { name: 'AWS', level: 75 },
-        { name: 'Figma', level: 90 },
+        { name: 'GitHub', level: 96 },
+        { name: 'OpenSSL', level: 75 },
+        { name: 'Linux', level: 90 },
       ]
     }
   ];

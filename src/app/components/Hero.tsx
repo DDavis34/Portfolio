@@ -66,7 +66,7 @@ export function Hero() {
           >
             Hi, I'm{' '}
             <span className="bg-gradient-to-r from-purple-500 via-pink-500 to-orange-500 bg-clip-text text-transparent font-bold">
-              Alex Morgan
+              Dillon Davis
             </span>
           </motion.h1>
           
@@ -76,7 +76,7 @@ export function Hero() {
             transition={{ delay: 0.4 }}
             className="text-xl md:text-2xl lg:text-3xl text-gray-400 mb-8"
           >
-            Full Stack Developer & Creative Designer
+            Software Engineer
           </motion.p>
 
           <motion.p
@@ -84,8 +84,7 @@ export function Hero() {
             animate={{ opacity: 1, y: 0 }}
             transition={{ delay: 0.6 }}
             className="text-lg md:text-xl text-gray-500 mb-12 max-w-2xl mx-auto"
-          >
-            I craft beautiful, functional web experiences that blend cutting-edge technology with stunning design
+          >I craft clean, high-performance projects by blending a love for solving complex logic with functional design.
           </motion.p>
 
           <motion.div
@@ -95,7 +94,7 @@ export function Hero() {
             className="flex items-center justify-center gap-6 mb-16"
           >
             <a
-              href="https://github.com"
+              href="https://github.com/DDavis34"
               target="_blank"
               rel="noopener noreferrer"
               className="p-3 bg-gray-800 hover:bg-purple-600 rounded-full transition-all duration-300 hover:scale-110"
@@ -103,7 +102,7 @@ export function Hero() {
               <Github size={24} />
             </a>
             <a
-              href="https://linkedin.com"
+              href="https://www.linkedin.com/in/dillondavis34/"
               target="_blank"
               rel="noopener noreferrer"
               className="p-3 bg-gray-800 hover:bg-pink-600 rounded-full transition-all duration-300 hover:scale-110"
@@ -111,7 +110,7 @@ export function Hero() {
               <Linkedin size={24} />
             </a>
             <a
-              href="mailto:alex@example.com"
+              href="mailto:dillon.davis.34@outlook.com"
               className="p-3 bg-gray-800 hover:bg-orange-600 rounded-full transition-all duration-300 hover:scale-110"
             >
               <Mail size={24} />
