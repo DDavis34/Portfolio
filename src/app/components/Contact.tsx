@@ -31,7 +31,7 @@ export function Contact() {
     {
       icon: Crown,
       label: 'Chess.com',
-      value: 'Try and to beat the best',
+      value: 'Try and beat the best',
       link: 'https://www.chess.com/member/DillonD34', 
       gradient: 'from-emerald-400 to-emerald-600'
     },
