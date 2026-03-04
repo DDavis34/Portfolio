@@ -7,7 +7,7 @@ import { Navigation } from './components/Navigation';
 
 function App() {
   return (
-    <div className="min-h-screen bg-[#1a1a1a] text-white">
+    <div className="w-full min-h-screen bg-[#1a1a1a] overflow-x-hidden text-white">
       <Navigation />
       <Hero />
       <About />

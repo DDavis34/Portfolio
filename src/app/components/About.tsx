@@ -43,12 +43,11 @@ export function About() {
           </motion.div>
 
           <div className="grid md:grid-cols-2 gap-12 items-center mb-20">
-            {/* INSTAGRAM EMBED SECTION */}
             <motion.div
               initial={{ opacity: 0, x: -50 }}
               animate={isInView ? { opacity: 1, x: 0 } : {}}
               transition={{ duration: 0.8, delay: 0.2 }}
-              className="relative w-full flex justify-center"
+              className="relative w-full flex flex-col items-center"
             >
               <div className="relative w-full max-w-[450px] h-[550px] rounded-3xl overflow-hidden group">
                 <div className="absolute -inset-1 bg-gradient-to-r from-purple-500 via-pink-500 to-orange-500 rounded-3xl blur-lg opacity-50 group-hover:opacity-75 transition duration-300" />
@@ -60,6 +59,9 @@ export function About() {
                   allowTransparency={true}
                 ></iframe>
               </div>
+              <p className="mt-5 text-sm text-gray-400 italic font-light tracking-wide text-center">
+                * the student in the middle is ME!
+              </p>
             </motion.div>
 
             <motion.div
@@ -72,7 +74,7 @@ export function About() {
                 Hi, I am Dillon, a student at Louisiana State University majoring in Computer Science. With a passion for technology and a drive to create impactful solutions, I have been honing my skills in software architecture and systems design.
               </p>
               <p className="text-lg text-gray-400 leading-relaxed">
-               "I love turning complex problems into clean, working software. When I'm away from the keyboard, I'm usually unwinding with my favorite video games or studying up on new strategies to improve my chess game."
+               I love turning complex problems into clean, working software. When I'm away from the keyboard, I'm usually unwinding with my favorite video games or studying up on new strategies to improve my chess game.
               </p>
             </motion.div> 
           </div>

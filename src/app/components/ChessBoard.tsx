@@ -204,12 +204,12 @@ export function ChessBoard() {
         {piece && <ChessPiece type={piece.type} color={piece.color} />}
       
         {col === 0 && (
-          <div className="absolute left-1 top-1 text-xs font-semibold" style={{ color: isLight ? '#18181b' : '#3f3f46' }}>
+          <div className="absolute left-1 top-1 text-[10px] sm:text-xs font-semibold" style={{ color: isLight ? '#18181b' : '#3f3f46' }}>
             {rank}
           </div>
         )}
         {row === 7 && (
-          <div className="absolute right-1 bottom-1 text-xs font-semibold" style={{ color: isLight ? '#18181b' : '#3f3f46' }}>
+          <div className="absolute right-1 bottom-1 text-[10px] sm:text-xs font-semibold" style={{ color: isLight ? '#18181b' : '#3f3f46' }}>
             {file}
           </div>
         )}
@@ -218,26 +218,26 @@ export function ChessBoard() {
   };
 
   return (
-    <div className="relative group w-full max-w-[480px] mx-auto mt-8 lg:mt-0">
+    <div className="relative group w-full max-w-[480px] mx-auto mt-8 lg:mt-0 px-2 sm:px-0">
       <div className="absolute -inset-1 bg-gradient-to-r from-purple-500 via-pink-500 to-orange-500 rounded-3xl blur-lg opacity-50 group-hover:opacity-75 transition duration-300"></div>
       
-      <div className="relative flex flex-col items-center gap-6 p-6 sm:p-8 bg-[#1f1f1f] rounded-3xl border border-gray-800">
-        <div className="flex justify-between items-center w-full px-2">
-          <div className="flex items-center gap-3">
+      <div className="relative flex flex-col items-center gap-4 sm:gap-6 p-4 sm:p-8 bg-[#1f1f1f] rounded-3xl border border-gray-800">
+        <div className="flex flex-wrap sm:flex-nowrap justify-between items-center w-full gap-3 sm:gap-0">
+          <div className="flex items-center gap-2 sm:gap-3 shrink-0">
             {isThinking ? (
-              <div className="w-4 h-4 border-2 border-pink-500 border-t-transparent rounded-full animate-spin" />
+              <div className="w-3 h-3 sm:w-4 sm:h-4 border-2 border-pink-500 border-t-transparent rounded-full animate-spin" />
             ) : (
-              <div className="w-4 h-4 rounded-full bg-gradient-to-r from-purple-500 to-pink-500" />
+              <div className="w-3 h-3 sm:w-4 sm:h-4 rounded-full bg-gradient-to-r from-purple-500 to-pink-500" />
             )}
-            <p className="text-base sm:text-lg font-semibold text-white truncate max-w-[120px] sm:max-w-none">{gameStatus}</p>
+            <p className="text-sm sm:text-lg font-semibold text-white truncate max-w-[140px] sm:max-w-none">{gameStatus}</p>
           </div>
 
-          <div className="flex items-center gap-2 sm:gap-3">
+          <div className="flex items-center min-w-0">
             <select
               value={difficulty}
               onChange={(e) => setDifficulty(e.target.value as Difficulty)}
               disabled={game.history().length > 0}
-              className="px-2 sm:px-3 py-1.5 border border-gray-700 rounded-lg bg-[#1a1a1a] text-white text-sm focus:outline-none focus:border-pink-500 transition-colors disabled:opacity-50 cursor-pointer"
+              className="w-full px-2 py-1.5 border border-gray-700 rounded-lg bg-[#1a1a1a] text-white text-xs sm:text-sm focus:outline-none focus:border-pink-500 transition-colors disabled:opacity-50 cursor-pointer truncate"
             >
               {Object.entries(DIFFICULTY_SETTINGS).map(([key, setting]) => (
                 <option key={key} value={key}>{setting.label}</option>
@@ -247,7 +247,7 @@ export function ChessBoard() {
         </div>
 
         <div className="relative w-full aspect-square">
-          <div className="grid grid-cols-8 gap-0 border-4 border-[#111] rounded-sm overflow-hidden w-full h-full shadow-2xl">
+          <div className="grid grid-cols-8 gap-0 border-[3px] sm:border-4 border-[#111] rounded-sm overflow-hidden w-full h-full shadow-2xl">
             {Array.from({ length: 8 }, (_, row) =>
               Array.from({ length: 8 }, (_, col) => renderSquare(row, col))
             )}
@@ -276,9 +276,9 @@ export function ChessBoard() {
         <div className="w-full">
           <button
             onClick={resetGame}
-            className="flex items-center justify-center gap-2 w-full py-3 bg-gradient-to-r from-purple-500 via-pink-500 to-orange-500 text-white rounded-xl font-medium hover:shadow-lg hover:shadow-pink-500/30 transition-all duration-300 hover:scale-[1.02]"
+            className="flex items-center justify-center gap-2 w-full py-2.5 sm:py-3 text-sm sm:text-base bg-gradient-to-r from-purple-500 via-pink-500 to-orange-500 text-white rounded-xl font-medium hover:shadow-lg hover:shadow-pink-500/30 transition-all duration-300 hover:scale-[1.02]"
           >
-            <RefreshCw className="w-5 h-5" />
+            <RefreshCw className="w-4 h-4 sm:w-5 sm:h-5" />
             Restart Match
           </button>
         </div>
