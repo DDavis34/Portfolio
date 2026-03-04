@@ -6,11 +6,13 @@ import { ImageWithFallback } from './figma/ImageWithFallback';
 export function Projects() {
   const [ref, isInView] = useInView({ threshold: 0.1 });
 
+  const BASE_URL = (import.meta as any).env.BASE_URL;
+
   const projects = [
     {
       title: 'AI Texas Holdem Bot',
       description: 'Uses hand evaluation, opponent modeling, and ensemble strategies for adaptive real-time tournament play.',
-      image: '/Portfolio/poker-logo.png',
+      image: `${BASE_URL}poker-logo.png`, 
       tags: ['Python', 'Websockets', 'Docker', 'Go'],
       gradient: 'from-purple-500 to-pink-500',
       githuburl: 'https://github.com/vekovius/AI-Texas-Holdem-CSC4444.git'
@@ -18,7 +20,7 @@ export function Projects() {
     {
       title: 'Tiger Compiler',
       description: 'Built a custom compiler in Java that turns source code into C, handling everything from Lexical analysis to code generation',
-      image: '/Portfolio`/compiler-logo.png',
+      image: `${BASE_URL}compiler-logo.png`, 
       tags: ['Java', 'Lex', 'Code Generation', 'C'],
       gradient: 'from-pink-500 to-orange-500',
       githuburl: 'https://github.com/MichaelRdot/Roll-Call.git'
@@ -26,7 +28,7 @@ export function Projects() {
     {
       title: 'Roll Call: PathFinder Adventures',
       description: 'Automates Pathfinder 2e campaigns with real-time character tracking, rule calculations, and API integration.',
-      image: '/Portfolio/rollcall-logo.png',
+      image: `${BASE_URL}rollcall-logo.png`, 
       tags: ['In Progress'],
       gradient: 'from-orange-500 to-yellow-500',
       githuburl: 'https://github.com/MichaelRdot/Roll-Call.git'
